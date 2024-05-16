@@ -1,7 +1,7 @@
 package com.atm.machine.service;
 
-import static com.atm.machine.util.AccountUtils.convertJsonToAccounts;
-import static com.atm.machine.util.AccountUtils.readJsonFromFile;
+import static com.atm.machine.util.ATMUtils.convertJsonToAccounts;
+import static com.atm.machine.util.ATMUtils.readJsonFromFile;
 
 import java.util.List;
 import java.util.Optional;
@@ -14,10 +14,7 @@ import org.springframework.context.event.EventListener;
 import org.springframework.stereotype.Service;
 
 import com.atm.machine.dao.AccountRepository;
-import com.atm.machine.entity.ATM;
 import com.atm.machine.entity.Account;
-
-import jakarta.persistence.EntityManager;
 
 @Service
 public class AccountService {
@@ -26,9 +23,6 @@ public class AccountService {
 
 	@Autowired
 	private AccountRepository accountRepository;
-
-	@Autowired
-	EntityManager entityManager;
 
 	public Account createAccount(Account account) {
 		return accountRepository.save(account);
@@ -80,7 +74,6 @@ public class AccountService {
 		List<Account> savedAccounts = null;
 
 		try {
-			entityManager.clear();
 			accountRepository.deleteAll();
 
 			savedAccounts = accountRepository
@@ -94,16 +87,5 @@ public class AccountService {
 		}
 
 		return savedAccounts;
-	}
-
-	/**
-	 * this method initializes the ATM at the start of application
-	 * 
-	 * @return List<Account>
-	 * 
-	 */
-	@EventListener(ApplicationReadyEvent.class)
-	public List<ATM> initATM() {
-		return null;
 	}
 }
