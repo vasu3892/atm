@@ -1,0 +1,26 @@
+[
+    {
+        "holderName": "Aman Kumar",
+        "balance": 1000232.3
+    },
+    {
+        "holderName": "Surveen Chaudhary",
+        "balance": 889923423.324
+    },
+    {
+        "holderName": "John Doe",
+        "balance": 1000.23
+    },
+    {
+        "holderName": "Kuldeep Singh",
+        "balance": 3423423432.23
+    },
+    {
+        "holderName": "Vasudev Pandey",
+        "balance": 80000
+    },
+    {
+        "holderName": "Govind Krishna Das",
+        "balance": 0.03
+    }
+]
