@@ -1,13 +1,13 @@
 package com.atm.machine.entity;
 
-import java.util.HashMap;
+import java.util.concurrent.ConcurrentHashMap;
 
 public class Withdrawal {
 
 	private ATM atm;
 	private Account account;
 	private int amount;
-	private HashMap<Integer, Integer> denominationMap;
+	private ConcurrentHashMap<Integer, Integer> denominationMap;
 	private String responseMessage;
 
 	public ATM getAtm() {
@@ -34,11 +34,11 @@ public class Withdrawal {
 		this.account = account;
 	}
 
-	public HashMap<Integer, Integer> getDenominationMap() {
+	public ConcurrentHashMap<Integer, Integer> getDenominationMap() {
 		return denominationMap;
 	}
 
-	public void setDenominationMap(HashMap<Integer, Integer> denominationMap) {
+	public void setDenominationMap(ConcurrentHashMap<Integer, Integer> denominationMap) {
 		this.denominationMap = denominationMap;
 	}
 

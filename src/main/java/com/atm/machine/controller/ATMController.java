@@ -21,7 +21,7 @@ public class ATMController {
 	}
 
 	@PutMapping("/updateATM")
-	public ATM updateAccount(@RequestBody ATM atm) {
+	public ATM updateATM(@RequestBody ATM atm) {
 		return atmService.updateATM(atm);
 	}
 

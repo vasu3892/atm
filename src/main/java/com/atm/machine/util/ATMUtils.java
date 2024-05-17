@@ -3,8 +3,8 @@ package com.atm.machine.util;
 import java.io.File;
 import java.io.IOException;
 import java.nio.file.Files;
-import java.util.HashMap;
 import java.util.List;
+import java.util.concurrent.ConcurrentHashMap;
 
 import org.springframework.expression.ParseException;
 import org.springframework.util.ResourceUtils;
@@ -33,9 +33,16 @@ public class ATMUtils {
 	}
 
 	public static int getCountByDenomination(int updatedAmount, Integer denomination,
-			HashMap<Integer, Integer> denominationMap) {
+			ConcurrentHashMap<Integer, Integer> denominationMap, int atmCount) {
 		int count = updatedAmount >= denomination ? updatedAmount / denomination : 0;
-		denominationMap.put(denomination, count);
-		return updatedAmount - count * denomination;
+		if (atmCount <= 0) {
+			return updatedAmount;
+		} else if (atmCount < count) {
+			denominationMap.put(denomination, atmCount);
+			return updatedAmount - atmCount * denomination;
+		} else {
+			denominationMap.put(denomination, count);
+			return updatedAmount - count * denomination;
+		}
 	}
 }
