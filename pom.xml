@@ -10,7 +10,7 @@
 		<relativePath /> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.atm.machine</groupId>
-	<artifactId>atm</artifactId>
+	<artifactId>atm-spring-boot-project</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>atm</name>
 	<description>Project for Spring Boot ATM Machine</description>

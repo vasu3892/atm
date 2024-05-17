@@ -1,0 +1,238 @@
+{
+	"info": {
+		"_postman_id": "6b58911d-7355-4544-8648-120cfdee7e8c",
+		"name": "ATM MACHINE API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "12376584"
+	},
+	"item": [
+		{
+			"name": "withDraw",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"amount\": 10000,\r\n    \"account\": {\r\n        \"accountNumber\": 1\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9091/withDraw",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9091",
+					"path": [
+						"withDraw"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "initATM",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9091/initATM",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9091",
+					"path": [
+						"initATM"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "initAccounts",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9091/initAccounts",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9091",
+					"path": [
+						"initAccounts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "addAccounts",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[\r\n    {\r\n        \"holderName\": \"Praveen Kumar\",\r\n        \"balance\": 7232276.8\r\n    },\r\n    {\r\n        \"holderName\": \"Praveen Kumar\",\r\n        \"balance\": 7232276.8\r\n    },\r\n    {\r\n        \"holderName\": \"Praveen Kumar\",\r\n        \"balance\": 7232276.8\r\n    },\r\n    {\r\n        \"holderName\": \"Praveen Kumar\",\r\n        \"balance\": 7232276.8\r\n    },\r\n    {\r\n        \"holderName\": \"Praveen Kumar\",\r\n        \"balance\": 7232276.8\r\n    },\r\n    {\r\n        \"holderName\": \"Praveen Kumar\",\r\n        \"balance\": 7232276.8\r\n    }\r\n]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9091/addAccounts",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9091",
+					"path": [
+						"addAccounts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getATM",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9091/getATM",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9091",
+					"path": [
+						"getATM"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getAllAccounts",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9091/accounts",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9091",
+					"path": [
+						"accounts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getAccountById",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9091/account/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9091",
+					"path": [
+						"account",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updateATM",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"denominationHundreds\": 1000,\r\n    \"denominationTwoHundreds\": 400,\r\n    \"denominationFiveHundreds\": 300,\r\n    \"denominationTwoThousands\": 900000\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9091/updateATM",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9091",
+					"path": [
+						"updateATM"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updateAccount",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"accountNumber\": 50,\r\n    \"holderName\": \"asdasd Pandey\",\r\n    \"balance\": 34324.34\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9091/updateaccount",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9091",
+					"path": [
+						"updateaccount"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deleteAccount",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9091/account/8",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9091",
+					"path": [
+						"account",
+						"8"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

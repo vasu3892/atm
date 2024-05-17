@@ -21,6 +21,10 @@ public class Account {
 	@JsonProperty("balance")
 	private BigDecimal balance;
 
+	public void setAccountNumber(int accountNumber) {
+		this.accountNumber = accountNumber;
+	}
+
 	public int getAccountNumber() {
 		return accountNumber;
 	}
